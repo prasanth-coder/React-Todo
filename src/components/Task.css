@@ -1,0 +1,33 @@
+.task-container{
+    margin: 10px;
+    padding: 20px;
+    border-top: 2px solid black;
+  
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.task-container input{
+    width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.task-container h2{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.task-container button{
+    padding: 10px;
+    background-color:red;
+    height: 100%;
+    color: white;
+    border-radius: 5px;
+    border: none;
+
+}
+
