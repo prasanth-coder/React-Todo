@@ -8,7 +8,7 @@
     justify-content: space-around;
 
 }
-.task-container input{
+.task-container input[type=checkbox]{
     width: 20px;
   height: 20px;
   border: 2px solid #ccc;
@@ -24,6 +24,32 @@
 .task-container button{
     padding: 10px;
     background-color:red;
+    height: 100%;
+    color: white;
+    border-radius: 5px;
+    border: none;
+
+}
+
+
+.form{
+    margin: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form input{
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.form button{
+    padding: 10px;
+    background-color:green;
     height: 100%;
     color: white;
     border-radius: 5px;

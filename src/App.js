@@ -7,6 +7,7 @@ import Header from './components/Header';
 
 const App = () => {
   const [task,setTask] = useState("");
+  const [eTask,setETask] = useState("");
   const [tasks,setTasks] = useState([]);
   const [checkedTasks, setCheckedTasks] = useState([]);
  
@@ -14,7 +15,7 @@ const App = () => {
   const saveTask = (task) => {
     
     if(task!==""){
-      setTasks([...tasks,task]);
+      setTasks([...tasks,{task:task,isEditing:false}]);
       setTask("");
     }
     else{
@@ -41,6 +42,19 @@ const App = () => {
     }
   };
 
+  const editTask = (ind) => {
+  setTasks(tasks.map((t,index) => index === ind ? {...t,isEditing:!t.isEditing} : t))
+  }
+
+  const updateTask = (etask,id) => {
+    
+    setTasks(tasks.map((t,i) => i === id ? {task:etask,isEditing : !t.isEditing} : t) );
+    setETask("");
+
+    alert("Task Updated !!")
+    
+  }
+
   
 
   return (
@@ -50,6 +64,8 @@ const App = () => {
        <Display tasks={tasks} deleteTask={deleteTask} 
        checkedTasks={checkedTasks}
        toggleTask={toggleTask}
+       editTask={editTask}
+       eTask={eTask} setETask={setETask} updateTask={updateTask}
        
 
        />      
